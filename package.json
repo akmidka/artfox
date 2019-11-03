@@ -11,12 +11,16 @@
     "gatsby-plugin-offline": "^3.0.17",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.34",
+    "gatsby-source-contentful": "^2.1.54",
     "gatsby-source-filesystem": "^2.1.35",
     "gatsby-transformer-sharp": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-slick": "^0.25.2",
+    "react-slick-slider": "^0.15.10",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
