@@ -7,6 +7,7 @@ import team from "../images/team.png"
 import Slider from "react-slick"
 import Img from 'gatsby-image'
 import MasterClassBlock from "../components/master_class/master_class_block"
+import SLide from "../components/sLider/sLide"
 var settings = {
   dots: true,
   infinite: false,
@@ -136,7 +137,7 @@ const IndexPage = () => (
         <div>
             <Slider {...settings}>
             {data.allContentfulStudentsWorks.edges.map(document => (
-              <Img fluid={document.node.work.fluid}/>
+              <SLide image={document.node.work.fluid}/>
             ))}
           </Slider>
         </div>
@@ -195,7 +196,7 @@ const IndexPage = () => (
             <input placeholder="Телефон"/>
           </div>
           <input placeholder="Email*"/>
-          <textarea placeholder="Ваше сообщение"/>
+          <textarea placeholder="Ваше сообщение" />
           <button type="submit">Отправить</button>
         </form>
       </div>

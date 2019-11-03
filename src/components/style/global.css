@@ -10,11 +10,14 @@ body{
     position: relative;
     width: 100%;
 }
-a,p,h1,h2,h3,h4,h5,h6,button{
+a,p,h1,h2,h3,h4,h5,h6,button,textarea{
     font-family: 'Roboto', sans-serif;
     color: #333333;
     margin: 0;
     text-align: left;
+}
+textarea{
+    resize: none;
 }
 h1{
     font-size: 36px;
@@ -253,7 +256,16 @@ footer{
     height: 150px;
     width: 150px;
 }
-.slick-slide>.gatsby-image-wrapper{
-    width: 150px;
-    max-height: 120px;
+/* .slick-slide{
+    height: 140px;
+    background: #000;
+} */
+.slide_mk{
+    padding: 10px;
+    padding-left: 0;
+    height: 160px;
+    box-sizing: border-box;
+}
+.slide_mk>.gatsby-image-wrapper{
+    height: 100%;
 }
