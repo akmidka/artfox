@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import team from "../images/team.png"
 import Slider from "react-slick"
 import MasterClassBlock from "../components/master_class/master_class_block"
-import SLide from "../components/sLider/slide"
+import SLide from "../components/slider/slide"
 var settings = {
   dots: true,
   infinite: false,
