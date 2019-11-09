@@ -43,7 +43,6 @@ class Header extends React.Component{
           <Link className="link" to="#our_team">Команда</Link>
           <Link className="link" to="#master_class">Мастер-классы и курсы</Link>
           <Link className="link" to="#contact">Связаться с нами</Link>
-          <Link className="link" to="/">Art party</Link>
         </div>
       </header>
     )

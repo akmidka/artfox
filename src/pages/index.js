@@ -47,7 +47,7 @@ const IndexPage = () => (
             }
           }
         }
-        allContentfulMasterClass {
+        allContentfulMasterClass(sort: {fields: createdAt, order: DESC}, limit: 3) {
           edges {
             node {
               title
@@ -194,7 +194,7 @@ const IndexPage = () => (
           ))}
           
         </div>
-        <Link className="button_a" to="/">Увидеть все мастер-классы</Link>
+        <Link className="button_a" to="/all_courses/">Увидеть все мастер-классы</Link>
       </div>
     </div>
     <div className="container_wrapper contact" id="contact">

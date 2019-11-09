@@ -311,7 +311,7 @@ footer{
         margin: 10px 0;
     }
 }
-@media screen and (max-width: 720px){
+@media screen and (max-width: 730px){
     .wrapper{
         padding-top: 0;
     }
@@ -321,7 +321,7 @@ footer{
         position: fixed;
         left: 0;
         height: 100vh;
-        padding: 20px 0 0 20px;
+        padding: 20px 0 0 40px;
         box-sizing: border-box;
         background: white;
         flex-direction: column;
@@ -356,7 +356,7 @@ footer{
         position: relative;
         background: white;
         top: -20px;
-        left: -80px;
+        left: -100px;
         cursor: pointer;
     }
     .container{
