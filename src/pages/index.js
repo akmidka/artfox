@@ -13,7 +13,23 @@ var settings = {
   arrows: false,
   speed: 500,
   slidesToShow: 3,
-  slidesToScroll: 3
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 568,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 420,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }    
+  ]
 };
 const IndexPage = () => (
   <StaticQuery
@@ -22,6 +38,7 @@ const IndexPage = () => (
         allContentfulStudentsWorks {
           edges {
             node {
+              id
               work {
                 fluid{
                   ...GatsbyContentfulFluid
@@ -34,6 +51,7 @@ const IndexPage = () => (
           edges {
             node {
               title
+              id
               subtitle
               date(formatString: "DD.MM.YYYY HH:mm")
               image {
@@ -136,7 +154,10 @@ const IndexPage = () => (
         <div>
             <Slider {...settings}>
             {data.allContentfulStudentsWorks.edges.map(document => (
-              <SLide image={document.node.work.fluid}/>
+              <SLide 
+              image={document.node.work.fluid}
+              key={document.node.id}
+              />
             ))}
           </Slider>
         </div>
@@ -164,7 +185,7 @@ const IndexPage = () => (
         <div className="mk">
           {data.allContentfulMasterClass.edges.map(document => (
               <MasterClassBlock
-              key={document.node.id}
+                key={document.node.id}
                 title={document.node.title}
                 subtitle={document.node.subtitle}
                 date={document.node.date}
@@ -173,7 +194,7 @@ const IndexPage = () => (
           ))}
           
         </div>
-        <Link to="/">Увидеть все мастер-классы</Link>
+        <Link className="button_a" to="/">Увидеть все мастер-классы</Link>
       </div>
     </div>
     <div className="container_wrapper contact" id="contact">
@@ -196,7 +217,7 @@ const IndexPage = () => (
           </div>
           <input placeholder="Email*"/>
           <textarea placeholder="Ваше сообщение" />
-          <button type="submit">Отправить</button>
+          <button className="button_a" type="submit">Отправить</button>
         </form>
       </div>
     </div>

@@ -76,13 +76,14 @@ header{
     justify-content: space-between;
     align-items: center;
     padding-top: 60px;
+    position: relative;
 }
 .container_wrapper{
     width: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: cneter;
+    align-items: center;
 }
 .container{
     width: 60%;
@@ -131,7 +132,8 @@ header{
     background: rgba(57, 110, 148, 0.3);
 }
 .container_team>img{
-    height: 320px;
+    /* height: 320px; */
+    width: 100%;
     margin-bottom: 20px;
 }
 .container_contact>h1{
@@ -268,4 +270,122 @@ footer{
 }
 .slide_mk>.gatsby-image-wrapper{
     height: 100%;
+}
+.navbar_button{
+    min-height: 60px;
+    width: 60px;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 17px 15px;
+    align-items: space-between;
+    display: none;
+}
+.navbar_button>hr{
+    margin: 0;
+    height: 2px;
+    background: #333333;
+    border: none;
+    transition: 600ms;
+}
+@media screen and (max-width: 830px){
+    .master_class_block{
+        flex-direction: column;
+    }
+    .master_class_block>.gatsby-image-wrapper{
+        width: 100%;
+        min-width: 200px;
+        height: 160px;
+    }
+    .mcb_right{
+        margin-left: 0px;
+    
+    }
+    .mcb_right>a{
+        width: 100%;
+       
+    }
+    .mcb_right>h1{
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width: 720px){
+    .wrapper{
+        padding-top: 0;
+    }
+    .navbar{
+        background: white;
+        top: 0;
+        position: fixed;
+        left: 0;
+        height: 100vh;
+        padding: 20px 0 0 20px;
+        box-sizing: border-box;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        left: 100%;
+        transition: 300ms;
+    }
+    .navbar_active{
+        left: 20%;
+    }
+    .first_hr_active{
+        transform: rotate(45deg);
+        position: relative;  
+        top: 10px;      
+    }
+    .second_hr_active{
+        transform: scale(0);
+    }
+    .third_hr_active{
+        transform: rotate(135deg);
+        position: relative;  
+        top: -13px; 
+    }
+    .navbar>a{
+        margin-bottom: 30px;
+    }
+    .navbar_button{
+        display: flex;
+        position: relative;
+        background: white;
+        top: -20px;
+        left: -80px;
+        cursor: pointer;
+    }
+    .container{
+        width: 80%;
+        max-width: 720px;
+    }
+}
+@media screen and (max-width: 670px){
+    form{
+        width: 100%;
+        padding: 20px;
+    }
+    .form_top{
+        flex-direction: column;
+    }
+    .form_top>input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    h1{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 390px){
+    .button_a{
+        width: 100%;
+    }
+    .container_master_class>a{
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
